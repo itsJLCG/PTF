@@ -1,0 +1,47 @@
+.vertical-timeline span {
+    font-family: 'Courier Prime', monospace;
+}
+
+/* Default (dark-mode) appearance */
+.main-container.dark-mode .vertical-timeline-element-content {
+    background: rgba(255,255,255,0.04);
+    color: rgba(255,255,255,0.95);
+}
+
+.main-container.dark-mode .vertical-timeline-element-title,
+.main-container.dark-mode .vertical-timeline-element-subtitle {
+    color: rgba(255,255,255,0.95);
+}
+
+.main-container.dark-mode .vertical-timeline-element-date,
+.main-container.dark-mode .svg-inline--fa {
+    color: rgba(255,255,255,0.9);
+}
+
+/* Light mode appearance */
+.main-container.light-mode .vertical-timeline-element-content {
+    background: #ffffff;
+    color: rgb(34,34,34);
+}
+
+.main-container.light-mode .vertical-timeline-element-title,
+.main-container.light-mode .vertical-timeline-element-subtitle {
+    color: rgb(34,34,34);
+}
+
+.main-container.light-mode .vertical-timeline-element-date,
+.main-container.light-mode .svg-inline--fa {
+    color: rgb(80,80,80);
+}
+
+.vertical-timeline-element p {
+    /* justify paragraph text */
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+@media screen and (max-width: 1170px) {
+    .vertical-timeline-element .vertical-timeline-element-date {
+        color: rgb(39, 40, 34);
+    }
+}
