@@ -1,70 +1,91 @@
 import React from "react";
-import mock01 from '../assets/images/mock01.png';
-import mock02 from '../assets/images/mock02.png';
-import mock03 from '../assets/images/mock03.png';
-import mock04 from '../assets/images/mock04.png';
-import mock05 from '../assets/images/mock05.png';
-import mock06 from '../assets/images/mock06.png';
-import mock07 from '../assets/images/mock07.png';
-import mock08 from '../assets/images/mock08.png';
-import mock09 from '../assets/images/mock09.png';
-import mock10 from '../assets/images/mock10.png';
+import CVAPedImg from '../assets/images/CVAPed.png';
+import GreenSphereImg from '../assets/images/GreenSphere.png';
+import Mission13Img from '../assets/images/Mission13.jpg';
+import MEWImg from '../assets/images/MEW.png';
+import WBNHSImg from '../assets/images/WBNHS.png';
+import ParishConnectImg from '../assets/images/ParishConnect.jpg';
 import '../assets/styles/Project.scss';
 
 function Project() {
+
+    const handleDemoClick = (url: string) => {
+        try {
+            window.open(url, '_blank', 'noopener,noreferrer')?.focus();
+        } catch (err) {
+            // fallback: set location
+            window.location.href = url;
+        }
+    }
+
     return(
     <div className="projects-container" id="projects">
-        <h1>Personal Projects</h1>
+        <h1>Selected Projects</h1>
         <div className="projects-grid">
-            <div className="project">
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><img src={mock10} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><h2>Filmate AI</h2></a>
-                <p>Developed movie finder app with semantic search and sentiment analysis using OpenAI GPT-3.5 Turbo, Qdrant, React, and Flask.</p>
+            <div className="project project-card">
+                <div className="project-image"><img src={CVAPedImg} className="zoom" alt="CVAPed" /></div>
+                <div className="project-body">
+                    <h2>CVAPed: AI-Assisted Rehabilitation System</h2>
+                    <p>Developed and implemented an AI-assisted rehabilitation system for stroke and pediatric patients to support physical therapy and patient monitoring. Combined Python, machine learning, computer vision, ESP32, and web technologies in partnership with the Taguig Physical Medicine and Rehabilitation Unit.</p>
+                    <div className="project-actions">
+                        <button onClick={() => handleDemoClick('https://cva-ped.vercel.app/')} className="btn">Live Demo</button>
+                    </div>
+                </div>
             </div>
-            <div className="project">
-                <a href="#" target="_blank" rel="noreferrer"><img src={mock09} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="#" target="_blank" rel="noreferrer"><h2>High Speed Chase</h2></a>
-                <p>Designed, developed, and launched a 3D multiplayer racing game with C# and Unity. This is available on Itch.io for gamers worldwide to enjoy.</p>
+
+            <div className="project project-card">
+                <div className="project-image"><img src={GreenSphereImg} className="zoom" alt="GreenSphere" /></div>
+                <div className="project-body">
+                    <h2>GreenSphere: Renewable Energy Simulation Platform</h2>
+                    <p>Developed a 3D web-based platform to explore renewable energy solutions and analyze environmental and economic impact. Built with React, React Three Fiber (R3F), Three.js, Python, and data analytics to visualize infrastructure models and estimate carbon reductions.</p>
+                    <div className="project-actions">
+                        <button onClick={() => handleDemoClick('https://green-sphere-for-deployment-frontend.vercel.app/')} className="btn">Live Demo</button>
+                    </div>
+                </div>
             </div>
-            <div className="project">
-                <a href="#" target="_blank" rel="noreferrer"><img src={mock08} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="#" target="_blank" rel="noreferrer"><h2>Astro Raiders</h2></a>
-                <p>Developed and released a 2D shooting game with C# and Unity. This project is hosted on the Itch.io public marketplace.</p>
+            
+            <div className="project project-card">
+                <div className="project-image"><img src={Mission13Img} className="zoom" alt="Mission13" /></div>
+                <div className="project-body">
+                    <h2>Mission13: AI-Powered Eco Challenge Platform</h2>
+                    <p>Developed an AI-powered platform that gamifies climate action through personalized daily sustainability challenges and an interactive chatbot experience. Leveraged React, Node.js, Python, and AI technologies to promote eco-friendly habits, track user progress, and encourage long-term environmental awareness.</p>
+                    <div className="project-actions">
+                        <button onClick={() => handleDemoClick('https://github.com/itsJLCG/Mission13')} className="btn">Source</button>
+                    </div>
+                </div>
             </div>
-            <div className="project">
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><img src={mock07} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><h2>Datum: Integrated Learning Platform</h2></a>
-                <p>This is an online educational platform that provides high-quality, data science-focused learning resources in the Japanese language. I created the entire platform from scratch using Ruby on Rails.</p>
+            
+            <div className="project project-card">
+                <div className="project-image"><img src={MEWImg} className="zoom" alt="MEW" /></div>
+                <div className="project-body">
+                    <h2>MEW: Milu Edge Wear (E-Commerce Platform)</h2>
+                    <p>Developed a full-stack e-commerce platform that provides a seamless online shopping experience with product browsing, secure transactions, and order management. Built using the MERN stack (MongoDB, Express.js, React, Node.js), including user authentication, shopping cart functionality, and an admin dashboard for inventory and customer management.</p>
+                    <div className="project-actions">
+                        <button onClick={() => handleDemoClick('https://github.com/itsJLCG/MEW')} className="btn">Source</button>
+                    </div>
+                </div>
             </div>
-            <div className="project">
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><img src={mock06} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><h2>WeManage: Real Estate Asset Management</h2></a>
-                <p>This mobile application allows realtors in Japan to securely manage their property information and view future income predictions. This app is built with Ruby on Rails and JavaScript.</p>
+            
+            <div className="project project-card">
+                <div className="project-image"><img src={WBNHSImg} className="zoom" alt="WBNHS" /></div>
+                <div className="project-body">
+                    <h2>WBNHS: Western Bicutan National High School System</h2>
+                    <p>Developed a web-based information system for Western Bicutan National High School to support school-related processes and improve access to academic and administrative information. The system streamlines communication, organizes school data, and enhances efficiency for students, teachers, and administrators.</p>
+                    <div className="project-actions">
+                        <button onClick={() => handleDemoClick('https://wbnhs.vercel.app/')} className="btn">Live Demo</button>
+                    </div>
+                </div>
             </div>
-            <div className="project">
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><h2>COVID-19 Case Management</h2></a>
-                <p>Built official charts for COVID/vaccination tracking for an educational institution using JavaScript and the Google Sheets API v4. The dashboard served the university's leadership in their decision-making processes.</p>
-            </div>
-            <div className="project">
-                <a href="#" target="_blank" rel="noreferrer"><img src={mock04} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="#" target="_blank" rel="noreferrer"><h2>Multiple Regression Property Analysis</h2></a>
-                <p>Analyzed the real estate market in Japan and predicted property prices by implementing statistical methods such as OLS and multi-regression analysis. This project leveraged Python and various libraries such as Pandas, NumPy, Matplotlib, and Scikit-Learn.</p>
-            </div>
-            <div className="project">
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><h2>Programs of Study</h2></a>
-                <p>Designed and developed a custom component for a CMS-based platform (e.g., 'Brightspot') using Java, Handlebars, and LESS. University students can find their majors of interest through this module.</p>
-            </div>
-            <div className="project">
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><img src={mock02} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><h2>Transfer Evaluation Matrix</h2></a>
-                <p>Created an interactive CSV table generator with Java, Handlebars, and LESS. This project helps transfer students to quickly identify eligible credits.</p>
-            </div>
-            <div className="project">
-                <a href="#" target="_blank" rel="noreferrer"><img src={mock01} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="#" target="_blank" rel="noreferrer"><h2>Submeowrine</h2></a>
-                <p>Developed and released an Android mobile application using Java and Android Studio that runs a 2D shooting game.</p>
+            
+            <div className="project project-card">
+                <div className="project-image"><img src={ParishConnectImg} className="zoom" alt="ParishConnect" /></div>
+                <div className="project-body">
+                    <h2>ParishConnect: Smart Parish Management System</h2>
+                    <p>Developed a web-based parish management system designed to digitize and centralize church operations, including announcements, mass schedules, and parish services. The platform improves communication between parish administrators and members while streamlining requests and event coordination.</p>
+                    <div className="project-actions">
+                        <button onClick={() => handleDemoClick('https://github.com/itsJLCG/ParishConnect')} className="btn">Source</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
