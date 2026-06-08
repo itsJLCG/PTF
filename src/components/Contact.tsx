@@ -30,10 +30,10 @@ function Contact() {
               <span className="contact-text">Email — ludwigjhon.gayapa@gmail.com</span>
             </a>
 
-            <a href="#" className="contact-item" target="_blank" rel="noreferrer">
+            <button type="button" className="contact-item">
               <PhoneIcon />
               <span className="contact-text">Viber — Available on request</span>
-            </a>
+            </button>
 
             <a href="https://www.facebook.com/jhonludwig.gayapa" className="contact-item" target="_blank" rel="noreferrer">
               <FacebookIcon />
